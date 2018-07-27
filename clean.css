@@ -1,0 +1,49 @@
+body {
+	background-color: #f2f2f2;
+    font-size: 1.0em;
+}
+
+input[type=text], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: inline-block;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+}
+
+input.remove {
+	background-color: red;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 0px 10px;
+}
+
+.output {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#help_text {
+	display: none;
+}

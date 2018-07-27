@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TimeCalc</title>
+		<script src="behavior.js"></script>
+		<link rel="stylesheet" type="text/css" href="clean.css">
+	</head>
+	<body>
+		<h1>Simple Hours:Minutes Totaler</h1>
+		<div id="total_time_output" class="output">
+			<p>Total duration is: <span id="total_time_value">zero</span></p>
+		</div>
+		<div id="time_remain_output" class="output">
+		    <p>Time remaining: <span id="time_remain_value">----</span></p>
+		</div>
+		<p>Enter duration in format (-)h:mm and select "Add" or hit [Enter]</p>
+		<p id="help_text">Input must be whole number of hours : number of minutes.  Either number may be omitted, provided the ":" is included.  Negative sign must be left of the ":".  Valid examples include 1:15, 2:, :15, -0:25.</p>
+		<form>
+			<input id="input_text" type="text">
+			<input id="add_button" type="button" value="Add">
+			<input id="pop_button" type="button" class="remove" value="Remove Last Entry">
+		</form>
+		<h3>Set goal for time remaining:</h3>
+		<form>
+		    <input id="time_remain_input" type="text">
+			<input id="time_remain_set" type="button" value="Set">
+			<input id="time_remain_clear" type="button" class="remove" value="Remove Goal">
+		</form>
+		<h3>List of values:</h3>
+		<div id="duration_list">
+		</div>
+		Copyright Matt Caldwell 2015
+	</body>
+</html>
