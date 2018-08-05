@@ -28,9 +28,14 @@ function popDuration() {
 }
 
 function isValid(input) {
+	/* validates input is made up of int:int
+	loop allows for 1 or 2 length inputs (inputs without a :)
+	*/
     var input_array = input.split(":");
-    if (isNaN(input_array[0]) || isNaN(input_array[1])) {
-        return false;
+	for (word_index in input_array) {
+		if (isNaN(input_array[word_index])) {
+			return false;
+		}
 	}
 	return true;
 }
@@ -69,13 +74,19 @@ function timeTextToMins(input) {
 	"2:" evaluates to 120;
 	":30" evaluates to 30;
 	"-1:10" evaluates to -70
-	"-:20" evaluates to -20*/
+	"-:20" evaluates to -20
+	"5" evaluates to 5
+	*/
 	
 	if (!isValid(input)) {
 	    return;
 	}
 	
 	var input_array = input.split(":");
+	if (input_array.length === 1) {
+		//in this case, only minutes were input
+		return Number(input);
+	}
 	var hh = Number(input_array[0]*60);
 	var mm = Number(input_array[1]);
 	if (input_array[0][0] === "-") {
