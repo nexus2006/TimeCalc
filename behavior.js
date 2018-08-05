@@ -106,6 +106,17 @@ function formatTime(num_minutes_raw) {
     return sign + hh + ":" + mm;
 }
 
+function keyHandler(key_event) {
+	if (key_event.key === "Enter") {
+		if (key_event.target === "input_text") {
+			addDuration();
+		}
+		if (key_event.target === "time_remain_input") {
+			setTimeRemain();
+		}
+	}
+}
+
 window.onload = function() {
     list_display = document.getElementById("duration_list");
     updateTotalDisplay();
@@ -113,4 +124,6 @@ window.onload = function() {
 	document.getElementById("pop_button").addEventListener("click", popDuration);
 	document.getElementById("time_remain_set").addEventListener("click", setTimeRemain);
 	document.getElementById("time_remain_clear").addEventListener("click", clearTimeRemain);
+	document.getElementById("input_text").addEventListener("keydown", keyHandler);
+	document.getElementById("time_remain_input").addEventListener("keydown", keyHandler);
 }
