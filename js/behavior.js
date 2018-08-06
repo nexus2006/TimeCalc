@@ -6,6 +6,7 @@ var total = 0;
 function addDuration() {
     var input = document.getElementById("input_text").value;
 	if (isValid(input)) {
+		document.getElementById("help_text").style.display="none";
 		var input_val = timeTextToMins(input);
 		entries.push(input_val);
 	    updateTotalDisplay();
