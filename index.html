@@ -15,13 +15,13 @@
 		</div>
 		<p>Enter duration in format (-)h:mm and select "Add" or hit [Enter]</p>
 		<p id="help_text">Input must be whole number of hours : number of minutes.  Either number may be omitted, provided the ":" is included.  Negative sign must be left of the ":".  Valid examples include 1:15, 2:, :15, -0:25.</p>
-		<form>
+		<form onSubmit="return false;">
 			<input id="input_text" type="text">
 			<input id="add_button" type="button" value="Add">
 			<input id="pop_button" type="button" class="remove" value="Remove Last Entry">
 		</form>
 		<h3>Set goal for time remaining:</h3>
-		<form>
+		<form onSubmit="return false;">
 		    <input id="time_remain_input" type="text">
 			<input id="time_remain_set" type="button" value="Set">
 			<input id="time_remain_clear" type="button" class="remove" value="Remove Goal">

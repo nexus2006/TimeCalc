@@ -119,10 +119,11 @@ function formatTime(num_minutes_raw) {
 
 function keyHandler(key_event) {
 	if (key_event.key === "Enter") {
-		if (key_event.target === "input_text") {
+		key_event.stopPropagation();
+		if (key_event.target.id === "input_text") {
 			addDuration();
 		}
-		if (key_event.target === "time_remain_input") {
+		if (key_event.target.id === "time_remain_input") {
 			setTimeRemain();
 		}
 	}
