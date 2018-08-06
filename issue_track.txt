@@ -1,4 +1,7 @@
 Feature requests:
+add night mode
+	dark theme CSS
+	button/toggle at bottom of page
 
 Known bugs:
 remove help display after successful entry
