@@ -1,0 +1,4 @@
+Feature requests:
+
+Known bugs:
+remove help display after successful entry
