@@ -14,7 +14,7 @@
 		    <p>Time remaining: <span id="time_remain_value">----</span></p>
 		</div>
 		<p>Enter duration in format (-)h:mm and select "Add" or hit [Enter]</p>
-		<p id="help_text" >Input must be whole number of hours : number of minutes.  Either number may be omitted, provided the ":" is included.  Negative sign must be left of the ":".  Valid examples include 1:15, 2:, :15, -0:25.</p>
+		<p id="help_text" >Input must be whole number of minutes or hours:minutes.  Whole numbers without the ":" are considered minutes only.  Minutes may be greater than 60 (e.g. 70 minutes = 1:10).  You may enter hours only with a ":" at the end.  Negative sign must be left of the ":".  Valid examples include 1:15, 2:, :15, 20, 85, -0:25, etc.</p>
 		<form onSubmit="return false;">
 			<input id="input_text" type="text">
 			<input id="add_button" type="button" value="Add">
